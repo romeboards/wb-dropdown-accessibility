@@ -13,7 +13,7 @@ $(".w-dropdown-toggle").each(function() {
   $(this).keydown(function(e) {
 
 
-    console.log("keydown: ", e.which);
+  console.log("keydown: ", e.which);
 
     /* IF enter click (toogle menu) */
     if (e.which == ENTER_KEY_CODE) {
@@ -208,18 +208,6 @@ $("a.w-dropdown-link").each(function() {
   $(this).css("outline","initial");
 });
 
-// Fix weird JS applying outline none
-
-$(".w-dropdown-toggle").focus(function () {
-  console.log("toggle focus");
-  $(this).css("outline", "5px solid #0b7ea2");
-});
-
-
-$(".w-dropdown-link").focus(function () {
-  console.log("link focus");
-  $(this).css("outline", "5px solid #0b7ea2");
-});
 
 /* fix bug (webflow add tabIndex=-1) - should be 0 */
 var slides = document.getElementsByClassName("w-dropdown-link");

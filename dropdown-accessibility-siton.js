@@ -209,8 +209,17 @@ $("a.w-dropdown-link").each(function() {
 });
 
 // Fix weird JS applying outline none
-$(".dropdown-toggle").css("outline", "5px solid #0b7ea2");
-$(".dropdown-toggle").css("outline", "5px solid #0b7ea2");
+
+$(".w-dropdown-toggle").focus(function () {
+  console.log("toggle focus");
+  $(this).css("outline", "5px solid #0b7ea2");
+});
+
+
+$(".w-dropdown-link").focus(function () {
+  console.log("link focus");
+  $(this).css("outline", "5px solid #0b7ea2");
+});
 
 /* fix bug (webflow add tabIndex=-1) - should be 0 */
 var slides = document.getElementsByClassName("w-dropdown-link");

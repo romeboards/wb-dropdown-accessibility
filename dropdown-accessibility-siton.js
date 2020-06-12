@@ -199,14 +199,18 @@ function toggledAriaExpanded() {
 }
 
 /* Add tab index */
-$(".w-dropdown-toggle").each(function() {
-  $(this).attr("tabindex", "0");
+$(this).attr("tabindex", "0");
+  $(".w-dropdown-toggle").each(function() {
 });
 
 $("a.w-dropdown-link").each(function() {
   $(this).attr("tabindex", "0");
   $(this).css("outline","initial");
 });
+
+// Fix weird JS applying outline none
+$(".dropdown-toggle").css("outline", "5px solid #0b7ea2");
+$(".dropdown-toggle").css("outline", "5px solid #0b7ea2");
 
 /* fix bug (webflow add tabIndex=-1) - should be 0 */
 var slides = document.getElementsByClassName("w-dropdown-link");

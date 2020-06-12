@@ -11,6 +11,10 @@ $(".w-dropdown-toggle").each(function() {
   /* Keyboards Event Part 1 of 2 */
   /* Click events for the "dropdown toggle button" */
   $(this).keydown(function(e) {
+
+
+    console.log("keydown: ", e.which);
+
     /* IF enter click (toogle menu) */
     if (e.which == ENTER_KEY_CODE) {
       console.log("1");
@@ -163,6 +167,9 @@ $(".w-dropdown-link").keydown(function(e) {
 
 /* Functions */
 function toggleAccessibilityDropdown(obj) {
+
+  console.log('toggle dropdown');
+
   $(obj)
     .closest(".w-dropdown")
     .find("div.w-dropdown-toggle")

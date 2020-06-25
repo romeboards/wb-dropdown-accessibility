@@ -217,3 +217,13 @@ setTimeout(function(){
        slides.item(i).setAttribute("tabindex", "0");  
     }
 }, 1000);
+
+/* See http://pauljadam.com/demos/keyboard-focus-only.html */
+document.addEventListener("keydown", function () {
+  document.documentElement.classList.remove("as-mouseuser");
+  document.documentElement.classList.add("as-keyboarduser");
+});
+document.addEventListener("mousedown", function () {
+  document.documentElement.classList.remove("as-keyboarduser");
+  document.documentElement.classList.add("as-mouseuser");
+});
